@@ -1,0 +1,51 @@
+/* Noviqo Studio — design tokens (derived from brand/NOVIQO.png: midnight navy · metallic gold · white)
+   Modular: single theming layer, cached separately. */
+:root {
+  /* color — navy scale (logo background family) */
+  --navy-950: #070C16;
+  --navy-900: #0C1424;   /* page canvas — matches logo bg */
+  --navy-850: #101A30;
+  --navy-800: #15213C;   /* raised surface */
+  --navy-700: #1D2C4E;   /* borders on dark */
+
+  /* color — gold scale (logo mark family) */
+  --gold: #D4A93C;             /* base metallic */
+  --gold-bright: #F0CE6E;      /* text-safe on navy */
+  --gold-deep: #A87E22;
+  --grad-gold: linear-gradient(100deg, #F6DE8D 0%, #E3B84D 45%, #C89732 70%, #F0CE6E 100%);
+
+  /* color — neutrals */
+  --white: #F8F9FC;
+  --body-on-dark: #AEB9CF;     /* muted body text on navy */
+  --line-on-dark: rgba(240, 206, 110, .14);   /* gold hairline */
+  --line-soft: rgba(174, 185, 207, .14);
+
+  /* semantic */
+  --bg: var(--navy-900);
+  --surface: var(--navy-800);
+  --ink: var(--white);
+  --muted: var(--body-on-dark);
+  --accent: var(--gold);
+  --accent-ink: #0B1120;       /* text on gold */
+  --wa: #25D366;
+
+  /* type */
+  --font-display: 'Syne', 'Inter', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* radius */
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --pill: 999px;
+
+  /* elevation & glow */
+  --shadow: 0 20px 60px -20px rgba(0, 0, 0, .55);
+  --glow-gold: 0 10px 40px -10px rgba(212, 169, 60, .45);
+  --glow-gold-soft: 0 0 80px -20px rgba(212, 169, 60, .25);
+
+  /* layout */
+  --maxw: 1180px;
+  --pad: 24px;
+}

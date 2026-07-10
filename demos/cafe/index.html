@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  ┌─────────────────────────────────────────────────────────────────────┐
+  │  NOVIQO STUDIO · Cafe Template (Warm theme)                          │
+  │  Reusable. Swap zones marked {{FIELD}} in the CONFIG comment below.  │
+  │  Website Factory (Phase 5) string-replaces these to mass-produce.    │
+  │  Single-file on purpose: instant preview, easy WhatsApp send.        │
+  └─────────────────────────────────────────────────────────────────────┘
+  CONFIG (what the factory injects):
+    {{BUSINESS_NAME}}   Brew & Bloom
+    {{TAGLINE}}         Slow mornings, good coffee, better company.
+    {{PHONE_E164}}      919876543210        (for wa.me + tel:)
+    {{PHONE_DISPLAY}}   +91 98765 43210
+    {{ADDRESS}}         12, 100 Ft Road, Indiranagar, Bengaluru 560038
+    {{MAPS_EMBED}}      Google Maps embed src
+    {{INSTAGRAM}}       https://instagram.com/brewandbloom
+    {{THEME}}           warm  (see brand/tokens.json)
+-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brew &amp; Bloom · Speciality Coffee &amp; Cafe in Indiranagar, Bengaluru</title>
+  <meta name="description" content="Brew & Bloom is a speciality coffee cafe in Indiranagar, Bengaluru. Freshly roasted coffee, all-day breakfast, and a warm space to slow down. Open 8am–11pm." />
+  <meta name="theme-color" content="#0F5132" />
+  <!-- Open Graph / social preview -->
+  <meta property="og:title" content="Brew & Bloom · Speciality Coffee in Indiranagar" />
+  <meta property="og:description" content="Freshly roasted coffee, all-day breakfast, and a warm space to slow down." />
+  <meta property="og:type" content="restaurant.menu" />
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Local SEO: schema.org structured data (helps "cafe near me" ranking) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Brew & Bloom",
+    "image": "https://images.unsplash.com/photo-1554118811-1e0d58224f24",
+    "address": { "@type": "PostalAddress", "streetAddress": "12, 100 Ft Road, Indiranagar", "addressLocality": "Bengaluru", "postalCode": "560038", "addressCountry": "IN" },
+    "telephone": "+919876543210",
+    "servesCuisine": "Coffee, Breakfast, Continental",
+    "priceRange": "₹₹",
+    "openingHours": "Mo-Su 08:00-23:00",
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "312" }
+  }
+  </script>
+
+  <style>
+    /* ── Design tokens (Warm theme · from brand/tokens.json) ── */
+    :root{
+      --ink:#1C1917; --paper:#FBF7F0; --accent:#0F5132; --accent2:#C2703D;
+      --muted:#78716C; --line:#E7E0D6; --card:#fff;
+      --display:'Fraunces',Georgia,serif; --body:'Inter',system-ui,sans-serif;
+      --r-sm:10px; --r-md:16px; --r-lg:24px; --pill:999px;
+      --shadow:0 10px 40px -12px rgba(28,25,23,.18);
+      --maxw:1160px;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+    h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.1;letter-spacing:-.02em}
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    section{padding:96px 24px}
+    .wrap{max-width:var(--maxw);margin:0 auto}
+    .eyebrow{font-family:var(--body);font-weight:600;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent2)}
+    .lead{color:var(--muted);font-size:1.075rem;max-width:60ch}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:.95rem;padding:.85rem 1.5rem;border-radius:var(--pill);transition:.2s transform,.2s box-shadow,.2s background;cursor:pointer;border:0}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 24px -8px rgba(15,81,50,.6)}
+    .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+    .btn-ghost:hover{border-color:var(--accent)}
+
+    /* ── Nav ── */
+    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(12px);background:rgba(251,247,240,.78);border-bottom:1px solid var(--line)}
+    nav{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px 24px}
+    .logo{font-family:var(--display);font-weight:700;font-size:1.35rem;letter-spacing:-.02em}
+    .logo span{color:var(--accent2)}
+    .nav-links{display:flex;gap:32px;align-items:center}
+    .nav-links a{font-size:.95rem;color:var(--muted);font-weight:500;transition:.2s}
+    .nav-links a:hover{color:var(--ink)}
+    .nav-links a.btn-primary{color:#fff}
+    .nav-links a.btn-primary:hover{color:#fff}
+    .nav-cta{padding:.6rem 1.15rem;font-size:.9rem}
+    .burger{display:none;background:0;border:0;cursor:pointer;font-size:1.5rem}
+
+    /* ── Hero ── */
+    .hero{position:relative;min-height:90vh;display:flex;align-items:center;padding:0 24px;overflow:hidden}
+    .hero-bg{position:absolute;inset:0;z-index:-2;background:url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1600&q=80') center/cover}
+    .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(28,25,23,.82) 0%,rgba(28,25,23,.55) 45%,rgba(28,25,23,.15) 100%)}
+    .hero-inner{max-width:var(--maxw);margin:0 auto;width:100%;color:#fff}
+    .hero h1{font-size:clamp(2.6rem,6vw,4.6rem);max-width:16ch;margin:.4rem 0 1.2rem}
+    .hero .lead{color:rgba(255,255,255,.9);font-size:1.2rem;margin-bottom:2rem}
+    .hero .eyebrow{color:#f0c9a8}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+    .rating-badge{display:inline-flex;align-items:center;gap:10px;margin-top:2.4rem;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:.6rem 1rem;border-radius:var(--pill);font-size:.9rem;backdrop-filter:blur(4px)}
+    .stars{color:#FFC65C;letter-spacing:2px}
+
+    /* ── Trust strip ── */
+    .strip{background:var(--ink);color:var(--paper)}
+    .strip .wrap{display:flex;justify-content:space-around;flex-wrap:wrap;gap:24px;padding:0;text-align:center}
+    .strip .stat b{font-family:var(--display);font-size:1.9rem;display:block;color:#fff}
+    .strip .stat span{font-size:.85rem;color:rgba(251,247,240,.7)}
+    .strip{padding:40px 24px}
+
+    /* ── About ── */
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+    .split img{border-radius:var(--r-lg);box-shadow:var(--shadow);height:100%;object-fit:cover}
+    .section-head{max-width:56ch;margin-bottom:56px}
+    .section-head h2{font-size:clamp(2rem,4vw,2.9rem);margin:.6rem 0 1rem}
+
+    /* ── Menu ── */
+    .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .menu-cat{background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);padding:28px;transition:.25s}
+    .menu-cat:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+    .menu-cat h3{font-size:1.3rem;margin-bottom:18px;color:var(--accent)}
+    .menu-item{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line)}
+    .menu-item:last-child{border:0}
+    .menu-item .nm{font-weight:500}
+    .menu-item .pr{font-family:var(--display);font-weight:600;color:var(--accent2);white-space:nowrap}
+    .menu-item small{display:block;color:var(--muted);font-weight:400;font-size:.82rem}
+
+    /* ── Gallery ── */
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .gallery img{border-radius:var(--r-sm);height:220px;width:100%;object-fit:cover;transition:.3s;cursor:pointer}
+    .gallery img:hover{transform:scale(1.03);filter:brightness(1.05)}
+    .gallery img:first-child{grid-column:span 2;grid-row:span 2;height:100%}
+
+    /* ── Reviews ── */
+    .reviews{background:#fff}
+    .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .rev{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-md);padding:28px}
+    .rev p{font-size:1.02rem;margin:12px 0 18px}
+    .rev .who{display:flex;align-items:center;gap:12px}
+    .rev .av{width:42px;height:42px;border-radius:var(--pill);background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:600}
+    .rev .who b{display:block;font-size:.95rem}
+    .rev .who span{font-size:.82rem;color:var(--muted)}
+
+    /* ── Contact ── */
+    .contact{background:var(--accent);color:#fff}
+    .contact a{color:#fff}
+    .contact .split{gap:56px}
+    .contact h2{font-size:clamp(2rem,4vw,2.9rem)}
+    .contact .lead{color:rgba(255,255,255,.85)}
+    .info-row{display:flex;gap:14px;margin:18px 0;align-items:flex-start}
+    .info-row .ic{font-size:1.3rem}
+    form{background:#fff;color:var(--ink);padding:32px;border-radius:var(--r-lg);box-shadow:var(--shadow)}
+    form label{font-size:.85rem;font-weight:600;display:block;margin:14px 0 6px}
+    form input,form textarea{width:100%;padding:.8rem 1rem;border:1.5px solid var(--line);border-radius:var(--r-sm);font-family:var(--body);font-size:.95rem;background:var(--paper)}
+    form input:focus,form textarea:focus{outline:0;border-color:var(--accent)}
+    form .btn-primary{width:100%;justify-content:center;margin-top:22px}
+    iframe{border:0;border-radius:var(--r-md);width:100%;height:220px;margin-top:20px}
+
+    /* ── Footer ── */
+    footer{background:var(--ink);color:rgba(251,247,240,.7);padding:56px 24px 32px;text-align:center}
+    footer .logo{color:#fff;margin-bottom:12px}
+    footer .fnav{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin:18px 0}
+    footer .fnav a:hover{color:#fff}
+    .credit{margin-top:24px;font-size:.8rem;opacity:.6}
+    .credit a{color:var(--accent2)}
+
+    /* ── Floating WhatsApp ── */
+    .fab{position:fixed;bottom:24px;right:24px;z-index:60;width:58px;height:58px;border-radius:var(--pill);background:#25D366;display:grid;place-items:center;box-shadow:0 8px 24px -6px rgba(37,211,102,.7);font-size:1.7rem;transition:.2s}
+    .fab:hover{transform:scale(1.08)}
+
+    /* ── Reveal animation ── */
+    .reveal{opacity:0;transform:translateY(24px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+    .reveal.in{opacity:1;transform:none}
+
+    /* ── Responsive ── */
+    @media(max-width:860px){
+      section{padding:64px 20px}
+      .nav-links{position:fixed;inset:64px 0 auto;flex-direction:column;background:var(--paper);padding:24px;gap:20px;border-bottom:1px solid var(--line);transform:translateY(-140%);transition:.3s;box-shadow:var(--shadow)}
+      .nav-links.open{transform:none}
+      .burger{display:block}
+      .split,.contact .split{grid-template-columns:1fr;gap:32px}
+      .menu-grid,.rev-grid{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr 1fr}
+      .gallery img:first-child{grid-column:span 2}
+      .hero{min-height:80vh}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ NAV ══ -->
+  <header>
+    <nav>
+      <a class="logo" href="#">Brew<span>&amp;</span>Bloom</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Visit</a>
+        <a class="btn btn-primary nav-cta" href="https://wa.me/919876543210?text=Hi%20Brew%20%26%20Bloom!%20I'd%20like%20to%20book%20a%20table." target="_blank" rel="noopener">Book a Table</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Menu">☰</button>
+    </nav>
+  </header>
+
+  <!-- ══ HERO ══ -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-inner">
+      <p class="eyebrow">Speciality Coffee · Indiranagar</p>
+      <h1>Slow mornings, good coffee, better company.</h1>
+      <p class="lead">Freshly roasted beans, all-day breakfast, and a warm corner of Bengaluru to actually slow down in.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#menu">View the Menu</a>
+        <a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.4)" href="https://wa.me/919876543210?text=Hi!%20I'd%20like%20to%20reserve%20a%20table%20at%20Brew%20%26%20Bloom." target="_blank" rel="noopener">Reserve on WhatsApp</a>
+      </div>
+      <div class="rating-badge"><span class="stars">★★★★★</span> 4.8 · 312 Google reviews</div>
+    </div>
+  </section>
+
+  <!-- ══ TRUST STRIP ══ -->
+  <section class="strip">
+    <div class="wrap">
+      <div class="stat"><b>4.8★</b><span>Google rating</span></div>
+      <div class="stat"><b>8am–11pm</b><span>Open every day</span></div>
+      <div class="stat"><b>100%</b><span>Fresh-roasted beans</span></div>
+      <div class="stat"><b>Free</b><span>Wi-Fi &amp; workspace</span></div>
+    </div>
+  </section>
+
+  <!-- ══ ABOUT ══ -->
+  <section id="about">
+    <div class="wrap split reveal">
+      <div>
+        <p class="eyebrow">Our Story</p>
+        <h2 style="font-size:clamp(2rem,4vw,2.9rem);margin:.6rem 0 1rem">A neighbourhood cafe, made for lingering.</h2>
+        <p class="lead">Brew &amp; Bloom started with one idea — a place where the coffee is taken seriously and the pace isn't. We roast in small batches, bake fresh every morning, and keep the good seats by the window. Whether it's your first meeting or your third refill, you're home here.</p>
+        <a class="btn btn-primary" style="margin-top:24px" href="#menu">See what's brewing</a>
+      </div>
+      <img src="https://images.unsplash.com/photo-1493857671505-72967e2e2760?auto=format&fit=crop&w=900&q=80" alt="Inside Brew & Bloom cafe" loading="lazy" />
+    </div>
+  </section>
+
+  <!-- ══ MENU ══ -->
+  <section id="menu" style="background:#fff">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">The Menu</p>
+        <h2>Small batch. Big flavour.</h2>
+        <p class="lead">A taste of what's on today. Ask our baristas for seasonal specials.</p>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-cat reveal">
+          <h3>☕ Coffee</h3>
+          <div class="menu-item"><span class="nm">Filter Coffee<small>South Indian classic</small></span><span class="pr">₹90</span></div>
+          <div class="menu-item"><span class="nm">Flat White<small>Double shot, silky milk</small></span><span class="pr">₹180</span></div>
+          <div class="menu-item"><span class="nm">Cold Brew<small>18-hour steep</small></span><span class="pr">₹210</span></div>
+          <div class="menu-item"><span class="nm">Pour Over<small>Single origin, rotating</small></span><span class="pr">₹240</span></div>
+        </div>
+        <div class="menu-cat reveal">
+          <h3>🍳 All-Day Breakfast</h3>
+          <div class="menu-item"><span class="nm">Big Bloom Brekkie<small>Eggs, sourdough, greens</small></span><span class="pr">₹320</span></div>
+          <div class="menu-item"><span class="nm">Avocado Toast<small>Chilli, lime, feta</small></span><span class="pr">₹280</span></div>
+          <div class="menu-item"><span class="nm">Masala Omelette<small>Three egg, buttered toast</small></span><span class="pr">₹190</span></div>
+          <div class="menu-item"><span class="nm">Acai Bowl<small>Granola, seasonal fruit</small></span><span class="pr">₹340</span></div>
+        </div>
+        <div class="menu-cat reveal">
+          <h3>🥐 Bakery</h3>
+          <div class="menu-item"><span class="nm">Butter Croissant<small>Baked fresh daily</small></span><span class="pr">₹140</span></div>
+          <div class="menu-item"><span class="nm">Chocolate Babka<small>Dark 70% cocoa</small></span><span class="pr">₹180</span></div>
+          <div class="menu-item"><span class="nm">Banana Bread<small>Walnut, warm</small></span><span class="pr">₹150</span></div>
+          <div class="menu-item"><span class="nm">Cinnamon Roll<small>Cream cheese glaze</small></span><span class="pr">₹170</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ GALLERY ══ -->
+  <section id="gallery">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">The Space</p>
+        <h2>Come see for yourself.</h2>
+      </div>
+      <div class="gallery reveal">
+        <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=800&q=80" alt="Latte art" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=500&q=80" alt="Coffee cup" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=500&q=80" alt="Cafe interior" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1481391319762-47dff72954d9?auto=format&fit=crop&w=500&q=80" alt="Pastries" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=500&q=80" alt="Barista pouring" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ REVIEWS ══ -->
+  <section id="reviews" class="reviews">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Loved Locally</p>
+        <h2>What Bengaluru is saying.</h2>
+      </div>
+      <div class="rev-grid">
+        <div class="rev reveal">
+          <span class="stars">★★★★★</span>
+          <p>"Hands down the best flat white in Indiranagar. The staff remember your order by the second visit. My default work-from-cafe spot."</p>
+          <div class="who"><div class="av">A</div><div><b>Ananya R.</b><span>Local Guide · 42 reviews</span></div></div>
+        </div>
+        <div class="rev reveal">
+          <span class="stars">★★★★★</span>
+          <p>"That babka. That cold brew. That corner seat by the window. Brew & Bloom just gets it. Cosy without trying too hard."</p>
+          <div class="who"><div class="av">K</div><div><b>Karthik M.</b><span>28 reviews</span></div></div>
+        </div>
+        <div class="rev reveal">
+          <span class="stars">★★★★★</span>
+          <p>"Took a client here for a meeting and they were more impressed by the cafe than my pitch. Great coffee, great vibe, fast Wi-Fi."</p>
+          <div class="who"><div class="av">S</div><div><b>Sneha D.</b><span>Local Guide · 67 reviews</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT / VISIT ══ -->
+  <section id="contact" class="contact">
+    <div class="wrap split">
+      <div class="reveal">
+        <p class="eyebrow" style="color:#f0c9a8">Visit Us</p>
+        <h2>Drop by, or say hi.</h2>
+        <p class="lead" style="margin-top:12px">We're on 100 Ft Road. Reserve a table, ask about catering, or just tell us your order — it lands straight on our WhatsApp.</p>
+        <div class="info-row"><span class="ic">📍</span><span>12, 100 Ft Road, Indiranagar,<br/>Bengaluru 560038</span></div>
+        <div class="info-row"><span class="ic">🕗</span><span>Open every day · 8:00 am – 11:00 pm</span></div>
+        <div class="info-row"><span class="ic">📞</span><a href="tel:+919876543210">+91 98765 43210</a></div>
+        <div class="info-row"><span class="ic">📷</span><a href="https://instagram.com/brewandbloom" target="_blank" rel="noopener">@brewandbloom</a></div>
+        <iframe title="Map" loading="lazy" src="https://www.google.com/maps?q=Indiranagar,Bengaluru&output=embed"></iframe>
+      </div>
+      <form id="enquiry" onsubmit="return sendWhatsApp(event)">
+        <h3 style="color:var(--accent);font-size:1.4rem">Reserve / Enquire</h3>
+        <p style="color:var(--muted);font-size:.9rem;margin-top:6px">Sends straight to our WhatsApp — we reply fast.</p>
+        <label for="nm">Your name</label>
+        <input id="nm" required placeholder="e.g. Ananya" />
+        <label for="dt">Date &amp; guests</label>
+        <input id="dt" required placeholder="e.g. Sat 7pm, 2 people" />
+        <label for="msg">Message (optional)</label>
+        <textarea id="msg" rows="3" placeholder="Any preferences?"></textarea>
+        <button class="btn btn-primary" type="submit">Send on WhatsApp →</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="logo">Brew<span style="color:var(--accent2)">&amp;</span>Bloom</div>
+    <p>Slow mornings, good coffee, better company.</p>
+    <div class="fnav">
+      <a href="#about">About</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#contact">Visit</a>
+      <a href="https://instagram.com/brewandbloom" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <p style="font-size:.85rem">© <span id="yr"></span> Brew &amp; Bloom · Indiranagar, Bengaluru · All rights reserved.</p>
+    <p class="credit">Website by <a href="#" target="_blank" rel="noopener">Noviqo Studio</a> — Look bigger. Get booked.</p>
+  </footer>
+
+  <!-- ══ FLOATING WHATSAPP ══ -->
+  <a class="fab" href="https://wa.me/919876543210?text=Hi%20Brew%20%26%20Bloom!" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+
+  <script>
+    // Mobile nav
+    const burger=document.getElementById('burger'),links=document.getElementById('navLinks');
+    burger.addEventListener('click',()=>links.classList.toggle('open'));
+    links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+
+    // Reveal on scroll
+    const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+    // Year
+    document.getElementById('yr').textContent=new Date().getFullYear();
+
+    // Enquiry form → WhatsApp (the selling point: leads land on the owner's phone)
+    const PHONE='919876543210';
+    function sendWhatsApp(e){
+      e.preventDefault();
+      const nm=document.getElementById('nm').value.trim();
+      const dt=document.getElementById('dt').value.trim();
+      const msg=document.getElementById('msg').value.trim();
+      const text=`Hi Brew & Bloom! Reservation request:\n• Name: ${nm}\n• When: ${dt}${msg?`\n• Note: ${msg}`:''}`;
+      window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`,'_blank');
+      return false;
+    }
+  </script>
+</body>
+</html>
