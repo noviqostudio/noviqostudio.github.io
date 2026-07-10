@@ -35,7 +35,7 @@ function initNav() {
 }
 
 // ── enquiry form → WhatsApp ──
-const NOVIQO_WA = '919876543210'; // TODO: replace with Noviqo's real WhatsApp number
+const NOVIQO_WA = '919535278181'; // Noviqo Studio WhatsApp
 function sendWhatsApp(e) {
   e.preventDefault();
   const nm = document.getElementById('nm').value.trim();
