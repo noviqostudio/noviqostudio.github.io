@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- NOVIQO STUDIO · Salon Template "Luxe Aura" (elegant plum+gold)
+     Conventions: docs/BUILD-PLAYBOOK.md. Factory swaps 919876543210 per client. -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxe Aura · Premium Salon &amp; Studio in Malviya Nagar, Jaipur</title>
+  <meta name="description" content="Luxe Aura is a premium unisex salon in Malviya Nagar, Jaipur. Expert stylists, luxury skin rituals, bridal studio. Book on WhatsApp." />
+  <meta name="theme-color" content="#6D2E46" />
+  <meta property="og:title" content="Luxe Aura · Premium Salon, Jaipur" />
+  <meta property="og:description" content="Expert stylists, luxury skin rituals, bridal studio." />
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BeautySalon","name":"Luxe Aura",
+   "address":{"@type":"PostalAddress","streetAddress":"C-42, Malviya Nagar","addressLocality":"Jaipur","postalCode":"302017","addressCountry":"IN"},
+   "telephone":"+919876543210","openingHours":"Tu-Su 10:00-20:30","priceRange":"₹₹",
+   "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"327"}}
+  </script>
+  <style>
+    :root{
+      --bg:#FBF6F3; --ink:#2B1B23; --muted:#7A6470; --card:#fff;
+      --plum:#6D2E46; --plum-dk:#54233A; --gold:#C9A227; --gold-soft:#F4E9C8; --rose:#F3E3E4;
+      --line:#EDDFE0;
+      --display:'Cormorant Garamond',Georgia,serif; --body:'Inter',system-ui,sans-serif;
+      --r-sm:6px; --r-md:12px; --r-lg:20px; --pill:999px;
+      --shadow:0 18px 50px -18px rgba(43,27,35,.2);
+      --glow:0 12px 32px -10px rgba(109,46,70,.4); --maxw:1140px;
+    }
+    *{margin:0;padding:0;box-sizing:border-box} html{scroll-behavior:smooth}
+    body{overflow-x:hidden;font-family:var(--body);color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+    h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spacing:.005em}
+    a{color:inherit;text-decoration:none} a,button{cursor:pointer} img{display:block;max-width:100%}
+    :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+    section{padding:96px 24px;position:relative} .wrap{max-width:var(--maxw);margin:0 auto}
+    .eyebrow{display:inline-flex;align-items:center;gap:12px;font-weight:600;font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--plum)}
+    .eyebrow::before,.eyebrow::after{content:"";width:26px;height:1px;background:var(--gold)}
+    .lead{color:var(--muted);font-size:1.05rem;max-width:58ch}
+    .section-head{max-width:60ch;margin:0 auto 56px;text-align:center}
+    .section-head .lead{margin:0 auto}
+    .section-head h2{font-size:clamp(2.2rem,4.8vw,3.4rem);margin:.6rem 0 1rem}
+    .hl{font-style:italic;color:var(--plum)}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:.93rem;padding:.95rem 1.8rem;border-radius:var(--pill);border:0;transition:transform .2s,box-shadow .2s,background .2s;letter-spacing:.04em}
+    .btn:hover{transform:translateY(-2px)} .btn:active{transform:scale(.98)}
+    .btn-primary{background:var(--plum);color:#fff;box-shadow:var(--glow)}
+    .btn-primary:hover{background:var(--plum-dk)}
+    .btn-gold{background:var(--gold);color:#3A2D06;box-shadow:0 12px 30px -10px rgba(201,162,39,.55)}
+    .btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--plum)}
+    .btn-ghost:hover{background:var(--rose)}
+    header{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(251,246,243,.88);border-bottom:1px solid var(--line)}
+    nav{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:15px 24px}
+    .logo{font-family:var(--display);font-weight:700;font-size:1.5rem;letter-spacing:.06em}
+    .logo span{color:var(--gold)}
+    .nav-links{display:flex;gap:30px;align-items:center}
+    .nav-links a{font-size:.9rem;color:var(--muted);font-weight:500;transition:.2s;letter-spacing:.03em}
+    .nav-links a:hover{color:var(--plum)} .nav-links a.btn-primary{color:#fff;padding:.6rem 1.3rem;font-size:.86rem}
+    .burger{display:none;background:0;border:0;font-size:1.5rem;color:var(--ink)}
+    /* hero */
+    .hero{padding:80px 24px;overflow:hidden}
+    .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+    .hero h1{font-size:clamp(2.8rem,6.4vw,4.8rem)}
+    .hero h1 em{font-style:italic;color:var(--plum)}
+    .hero .lead{font-size:1.12rem;margin:1.3rem 0 2.1rem}
+    .hero-media{position:relative}
+    .hero-media .skel{border-radius:120px 120px var(--r-lg) var(--r-lg)}
+    .hero-media img{border-radius:120px 120px var(--r-lg) var(--r-lg);aspect-ratio:4/5;object-fit:cover;width:100%;box-shadow:var(--shadow)}
+    .est{position:absolute;right:-14px;top:18px;background:var(--gold);color:#3A2D06;font-weight:700;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;padding:.55rem 1rem;border-radius:var(--r-sm);box-shadow:var(--shadow)}
+    .badge{display:inline-flex;align-items:center;gap:10px;margin-top:1.8rem;border:1px solid var(--line);background:#fff;padding:.55rem 1.1rem;border-radius:var(--pill);font-size:.86rem;color:var(--muted)}
+    .badge b{color:var(--plum)}
+    /* skeleton */
+    .skel{position:relative;overflow:hidden;background:var(--rose);border-radius:inherit}
+    .skel::after{content:"";position:absolute;inset:0;transform:translateX(-100%);background:linear-gradient(90deg,transparent,rgba(255,255,255,.75),transparent);animation:shimmer 1.4s infinite}
+    @keyframes shimmer{to{transform:translateX(100%)}}
+    .skel>img{opacity:0;transition:opacity .45s}
+    .skel.loaded{background:transparent}.skel.loaded::after{display:none}.skel.loaded>img{opacity:1}
+    /* services / price list */
+    .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .svc{background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);padding:32px;transition:.25s}
+    .svc:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .svc h3{font-size:1.65rem;color:var(--plum);margin-bottom:4px}
+    .svc .sub{font-size:.8rem;color:var(--gold);font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+    .svc ul{list-style:none;margin-top:18px}
+    .svc li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:.93rem}
+    .svc li:last-child{border:0}
+    .svc li span:last-child{font-family:var(--display);font-weight:700;font-size:1.05rem;color:var(--ink);white-space:nowrap}
+    .svc small{color:var(--muted)}
+    /* signature strip */
+    .sig{background:var(--plum);color:#fff;padding:70px 24px}
+    .sig .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;text-align:center}
+    .sig .ic{width:54px;height:54px;border-radius:var(--pill);border:1px solid rgba(201,162,39,.5);color:var(--gold);display:grid;place-items:center;margin:0 auto 14px}
+    .sig h3{font-size:1.35rem;margin-bottom:6px;color:#fff}
+    .sig p{color:rgba(255,255,255,.75);font-size:.92rem}
+    /* gallery */
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .gallery .skel{border-radius:var(--r-sm)}
+    .gallery img{height:240px;width:100%;object-fit:cover;border-radius:var(--r-sm);transition:.3s}
+    .gallery .skel:first-child{grid-column:span 2;grid-row:span 2}
+    .gallery .skel:first-child img{height:100%}
+    .gallery img:hover{transform:scale(1.03)}
+    /* reviews */
+    .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .rev{background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);padding:30px;position:relative}
+    .rev::before{content:"“";font-family:var(--display);font-size:4rem;color:var(--gold);line-height:1;position:absolute;top:14px;right:22px;opacity:.5}
+    .rev p{margin:10px 0 18px;font-size:.98rem}
+    .stars{color:var(--gold);letter-spacing:2px}
+    .who{display:flex;align-items:center;gap:12px}
+    .av{width:42px;height:42px;border-radius:var(--pill);background:var(--plum);color:#fff;display:grid;place-items:center;font-weight:700}
+    .who b{display:block;font-size:.95rem} .who span{font-size:.82rem;color:var(--muted)}
+    /* bridal banner */
+    .bridal{background:linear-gradient(120deg,var(--plum) 0%,var(--plum-dk) 100%);color:#fff;border-radius:var(--r-lg);padding:52px;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;box-shadow:var(--glow)}
+    .bridal h2{font-size:clamp(1.8rem,3.8vw,2.7rem)}
+    .bridal h2 em{font-style:italic;color:var(--gold)}
+    .bridal p{color:rgba(255,255,255,.8);max-width:48ch}
+    /* visit */
+    .visit{background:#fff;border-top:1px solid var(--line)}
+    .visit .split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+    .info-row{display:flex;gap:14px;margin:18px 0;align-items:center;color:var(--muted)}
+    .info-row svg{color:var(--plum);flex:none}
+    form{background:var(--bg);border:1px solid var(--line);color:var(--ink);padding:32px;border-radius:var(--r-lg)}
+    form h3{font-size:1.7rem;color:var(--plum)}
+    form label{font-size:.82rem;font-weight:600;display:block;margin:14px 0 6px}
+    form input,form textarea{width:100%;padding:.85rem 1rem;border:1.5px solid var(--line);border-radius:var(--r-sm);font-family:var(--body);font-size:.95rem;background:#fff}
+    form input:focus,form textarea:focus{outline:0;border-color:var(--plum);box-shadow:0 0 0 3px rgba(109,46,70,.12)}
+    form .btn-primary{width:100%;justify-content:center;margin-top:22px}
+    footer{background:#231219;color:rgba(251,246,243,.65);padding:56px 24px 32px;text-align:center}
+    footer .logo{color:#fff;margin-bottom:10px}
+    footer .fnav{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin:16px 0}
+    footer .fnav a:hover{color:#fff}
+    .credit{margin-top:22px;font-size:.8rem;opacity:.6}.credit a{color:var(--gold)}
+    .fab{position:fixed;bottom:24px;right:24px;z-index:60;width:58px;height:58px;border-radius:var(--pill);background:#25D366;display:grid;place-items:center;color:#fff;box-shadow:0 10px 28px -6px rgba(37,211,102,.6);transition:.2s}
+    .fab:hover{transform:scale(1.08)}
+    .reveal{opacity:0;transform:translateY(24px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+    .reveal.in{opacity:1;transform:none}
+    @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.skel::after{animation:none}}
+    @media(max-width:900px){
+      section{padding:64px 20px}
+      .nav-links{position:fixed;inset:62px 0 auto;flex-direction:column;background:var(--bg);padding:24px;gap:20px;transform:translateY(-170%);transition:.3s;border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
+      .nav-links.open{transform:none}.burger{display:block}
+      .hero .wrap,.visit .split{grid-template-columns:1fr;gap:36px}
+      .svc-grid,.rev-grid,.sig .wrap{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr 1fr}.gallery .skel:first-child{grid-column:span 2}
+      .bridal{padding:34px} .est{right:6px}
+    }
+  </style>
+</head>
+<body>
+  <!-- ══ NAV ══ -->
+  <header><nav>
+    <a class="logo" href="#">Luxe<span>Aura</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#services">Services</a><a href="#gallery">Studio</a><a href="#bridal">Bridal</a><a href="#reviews">Love</a><a href="#visit">Visit</a>
+      <a class="btn btn-primary" href="https://wa.me/919876543210?text=Hi%20Luxe%20Aura!%20I'd%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book Now</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+  </nav></header>
+
+  <!-- ══ HERO ══ -->
+  <section class="hero"><div class="wrap">
+    <div>
+      <p class="eyebrow">Premium Salon · Malviya Nagar, Jaipur</p>
+      <h1>Walk in. <em>Glow out.</em></h1>
+      <p class="lead">Expert stylists, luxury skin rituals and a bridal studio Jaipur swears by — in a space that feels like a deep breath.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <a class="btn btn-primary" href="https://wa.me/919876543210?text=Hi%20Luxe%20Aura!%20I'd%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book on WhatsApp</a>
+        <a class="btn btn-ghost" href="#services">View Price List</a>
+      </div>
+      <p class="badge"><b>★ 4.8</b> · 327 reviews · Tue–Sun, 10:00 am – 8:30 pm</p>
+    </div>
+    <div class="hero-media">
+      <div class="skel"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=80" alt="Styling session at Luxe Aura" loading="lazy" /></div>
+      <span class="est">Since 2016</span>
+    </div>
+  </div></section>
+
+  <!-- ══ SERVICES ══ -->
+  <section id="services"><div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Price List</p>
+      <h2>Honest prices, <span class="hl">luxury results.</span></h2>
+      <p class="lead">No surprise billing — what you see is what you pay. Combos on WhatsApp.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal"><span class="sub">Hair</span><h3>Cut &amp; Style</h3>
+        <ul>
+          <li><span>Signature Cut <small>· wash + blow-dry</small></span><span>₹699</span></li>
+          <li><span>Global Colour <small>· ammonia-free</small></span><span>₹2,999+</span></li>
+          <li><span>Balayage / Highlights</span><span>₹3,999+</span></li>
+          <li><span>Keratin / Botox <small>· shoulder length</small></span><span>₹4,499+</span></li>
+        </ul>
+      </div>
+      <div class="svc reveal"><span class="sub">Skin</span><h3>Rituals &amp; Glow</h3>
+        <ul>
+          <li><span>Luxe Signature Facial <small>· 60 min</small></span><span>₹1,899</span></li>
+          <li><span>Hydra Glow <small>· 75 min</small></span><span>₹2,999</span></li>
+          <li><span>Clean-up <small>· 30 min</small></span><span>₹799</span></li>
+          <li><span>Full-body Polish</span><span>₹2,499</span></li>
+        </ul>
+      </div>
+      <div class="svc reveal"><span class="sub">Grooming</span><h3>Hands, Feet &amp; More</h3>
+        <ul>
+          <li><span>Luxe Manicure <small>· spa grade</small></span><span>₹899</span></li>
+          <li><span>Luxe Pedicure <small>· spa grade</small></span><span>₹999</span></li>
+          <li><span>Waxing <small>· full arms + legs, rica</small></span><span>₹1,299</span></li>
+          <li><span>Threading + Detan</span><span>₹399</span></li>
+        </ul>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- ══ SIGNATURE ══ -->
+  <section class="sig" style="padding:70px 24px"><div class="wrap">
+    <div class="reveal"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 1.9 5.8H20l-4.9 3.6 1.8 5.8-4.9-3.6-4.9 3.6 1.8-5.8L4 8.8h6.1z"/></svg></div><h3>Senior stylists only</h3><p>Every chair is a specialist with 7+ years — no trainees practising on you.</p></div>
+    <div class="reveal"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Hygiene, obsessively</h3><p>Sterilised kits per client, branded products only, seals opened in front of you.</p></div>
+    <div class="reveal"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><h3>On time, every time</h3><p>Booked slots start on the minute. Your hour is yours alone.</p></div>
+  </div></section>
+
+  <!-- ══ GALLERY ══ -->
+  <section id="gallery"><div class="wrap">
+    <div class="section-head reveal"><p class="eyebrow">The Studio</p><h2>Step inside.</h2></div>
+    <div class="gallery reveal">
+      <div class="skel"><img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=900&q=80" alt="Luxe Aura studio interior" loading="lazy" /></div>
+      <div class="skel"><img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=500&q=80" alt="Hair styling" loading="lazy" /></div>
+      <div class="skel"><img src="https://images.unsplash.com/photo-1519415943484-9fa1873496d4?auto=format&fit=crop&w=500&q=80" alt="Skin ritual" loading="lazy" /></div>
+      <div class="skel"><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=500&q=80" alt="Makeup detail" loading="lazy" /></div>
+      <div class="skel"><img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=500&q=80" alt="Manicure" loading="lazy" /></div>
+    </div>
+  </div></section>
+
+  <!-- ══ BRIDAL ══ -->
+  <section id="bridal" style="padding-top:0"><div class="wrap">
+    <div class="bridal reveal">
+      <div>
+        <p class="eyebrow" style="color:var(--gold)">Luxe Bridal Studio</p>
+        <h2>Your day, <em>your aura.</em></h2>
+        <p>HD &amp; airbrush bridal makeup, pre-bridal packages, and a trial session so the big day holds zero surprises. Slots for the season fill early.</p>
+      </div>
+      <a class="btn btn-gold" href="https://wa.me/919876543210?text=Hi%20Luxe%20Aura!%20Bridal%20enquiry%20%E2%80%94%20date%3A%20" target="_blank" rel="noopener">Enquire for Your Date →</a>
+    </div>
+  </div></section>
+
+  <!-- ══ REVIEWS ══ -->
+  <section id="reviews" style="background:#fff"><div class="wrap">
+    <div class="section-head reveal"><p class="eyebrow">Client Love</p><h2>327 five-star stories.</h2></div>
+    <div class="rev-grid">
+      <div class="rev reveal"><span class="stars">★★★★★</span><p>"Got my balayage here after two bad experiences elsewhere. Perfect tone, zero damage, and they showed me the product seals first. Never going anywhere else."</p><div class="who"><div class="av">P</div><div><b>Pooja S.</b><span>Regular · 2 years</span></div></div></div>
+      <div class="rev reveal"><span class="stars">★★★★★</span><p>"Bridal makeup was flawless from pheras to 2am — didn't budge. The trial session sold me. Worth every rupee."</p><div class="who"><div class="av">N</div><div><b>Nikita R.</b><span>Bride, Dec 2025</span></div></div></div>
+      <div class="rev reveal"><span class="stars">★★★★★</span><p>"As a guy I felt totally at home — sharp fade, honest pricing, no pushy upselling. Rare for a premium salon."</p><div class="who"><div class="av">H</div><div><b>Harsh M.</b><span>Regular · 1 year</span></div></div></div>
+    </div>
+  </div></section>
+
+  <!-- ══ VISIT ══ -->
+  <section id="visit" class="visit"><div class="wrap split">
+    <div class="reveal">
+      <p class="eyebrow">Visit Us</p>
+      <h2 style="font-size:clamp(2rem,4.4vw,3rem);margin:.6rem 0 1rem">Book your slot.</h2>
+      <p class="lead">Message us your service and preferred time — we confirm on WhatsApp within minutes.</p>
+      <div class="info-row"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span>C-42, Malviya Nagar, Jaipur 302017</span></div>
+      <div class="info-row"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Tue–Sun · 10:00 am – 8:30 pm (Mon closed)</span></div>
+      <div class="info-row"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+919876543210">+91 98765 43210</a></div>
+    </div>
+    <form onsubmit="return sendWhatsApp(event)">
+      <h3>Book an Appointment</h3>
+      <label for="nm">Your name</label><input id="nm" required placeholder="e.g. Pooja" autocomplete="name" />
+      <label for="sv">Service &amp; preferred time</label><input id="sv" required placeholder="e.g. Haircut + facial, Sat 4pm" />
+      <label for="msg">Note (optional)</label><textarea id="msg" rows="2" placeholder="e.g. first visit, stylist preference"></textarea>
+      <button class="btn btn-primary" type="submit">Book on WhatsApp →</button>
+    </form>
+  </div></section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="logo">Luxe<span style="color:var(--gold)">Aura</span></div>
+    <p>Walk in. Glow out.</p>
+    <div class="fnav"><a href="#services">Services</a><a href="#bridal">Bridal</a><a href="#visit">Visit</a></div>
+    <p style="font-size:.85rem">© <span id="yr"></span> Luxe Aura · Malviya Nagar, Jaipur</p>
+    <p class="credit">Website by <a href="https://noviqostudio.github.io/" target="_blank" rel="noopener">Noviqo Studio</a> — Look bigger. Get booked.</p>
+  </footer>
+
+  <a class="fab" href="https://wa.me/919876543210?text=Hi%20Luxe%20Aura!" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg width="27" height="27" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    const burger=document.getElementById('burger'),links=document.getElementById('navLinks');
+    burger.addEventListener('click',()=>links.classList.toggle('open'));
+    links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+    document.querySelectorAll('.skel').forEach(w=>{const m=w.querySelector('img');if(!m){w.classList.add('loaded');return}
+      const d=()=>w.classList.add('loaded');
+      if(m.complete&&m.naturalWidth>0)return d();
+      m.addEventListener('load',d,{once:true});m.addEventListener('error',d,{once:true});setTimeout(d,6000);});
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    document.getElementById('yr').textContent=new Date().getFullYear();
+    const PHONE='919876543210';
+    function sendWhatsApp(e){e.preventDefault();
+      const nm=document.getElementById('nm').value.trim(),sv=document.getElementById('sv').value.trim(),msg=document.getElementById('msg').value.trim();
+      const text=`Hi Luxe Aura! Booking request:\n• Name: ${nm}\n• Service: ${sv}${msg?`\n• Note: ${msg}`:''}`;
+      window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`,'_blank');return false;}
+  </script>
+</body>
+</html>
