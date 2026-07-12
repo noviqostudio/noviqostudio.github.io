@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- NOVIQO STUDIO · Gym Template V2 "Pulse Studio" (bright boutique variant)
+     Conventions: docs/BUILD-PLAYBOOK.md. Factory swaps 919876543210 per client. -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pulse Studio · Boutique Fitness &amp; Group Classes in Indiranagar, Bengaluru</title>
+  <meta name="description" content="Pulse Studio is a boutique fitness studio in Indiranagar, Bengaluru. Small-group classes, expert coaches, energising space. First class free." />
+  <meta name="theme-color" content="#FF4D3D" />
+  <meta property="og:title" content="Pulse Studio · Boutique Fitness, Indiranagar" />
+  <meta property="og:description" content="Small-group classes, expert coaches. First class free." />
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ExerciseGym","name":"Pulse Studio",
+   "address":{"@type":"PostalAddress","streetAddress":"21, 12th Main, Indiranagar","addressLocality":"Bengaluru","postalCode":"560008","addressCountry":"IN"},
+   "telephone":"+919876543210","openingHours":"Mo-Su 06:00-22:00","priceRange":"₹₹",
+   "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"192"}}
+  </script>
+  <style>
+    :root{
+      --bg:#FAFAF7; --ink:#141414; --muted:#6E6E68; --card:#fff;
+      --accent:#FF4D3D; --accent-dk:#E03828; --peach:#FFE9E0; --line:#E9E7E0;
+      --display:'Space Grotesk',sans-serif; --body:'Inter',system-ui,sans-serif;
+      --r-sm:12px; --r-md:18px; --r-lg:28px; --pill:999px;
+      --shadow:0 18px 50px -18px rgba(20,20,20,.18);
+      --glow:0 12px 32px -8px rgba(255,77,61,.45); --maxw:1140px;
+    }
+    *{margin:0;padding:0;box-sizing:border-box} html{scroll-behavior:smooth}
+    body{overflow-x:hidden;font-family:var(--body);color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+    h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.06;letter-spacing:-.02em}
+    a{color:inherit;text-decoration:none} a,button{cursor:pointer} img{display:block;max-width:100%}
+    :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+    section{padding:96px 24px;position:relative} .wrap{max-width:var(--maxw);margin:0 auto}
+    .eyebrow{display:inline-block;font-weight:600;font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;color:var(--accent)}
+    .lead{color:var(--muted);font-size:1.06rem;max-width:60ch}
+    .section-head{max-width:58ch;margin-bottom:56px}
+    .section-head h2{font-size:clamp(2.1rem,4.6vw,3.2rem);margin:.6rem 0 1rem}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:.95rem;padding:.95rem 1.7rem;border-radius:var(--pill);border:0;transition:transform .2s,box-shadow .2s}
+    .btn:hover{transform:translateY(-2px)} .btn:active{transform:scale(.98)}
+    .btn-primary{background:var(--accent);color:#fff;box-shadow:var(--glow)}
+    .btn-primary:hover{background:var(--accent-dk)}
+    .btn-ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+    .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+    header{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(250,250,247,.85);border-bottom:1px solid var(--line)}
+    nav{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:15px 24px}
+    .logo{font-family:var(--display);font-weight:700;font-size:1.3rem;letter-spacing:-.02em}
+    .logo span{color:var(--accent)}
+    .nav-links{display:flex;gap:30px;align-items:center}
+    .nav-links a{font-size:.92rem;color:var(--muted);font-weight:600;transition:.2s}
+    .nav-links a:hover{color:var(--ink)} .nav-links a.btn-primary{color:#fff;padding:.6rem 1.2rem;font-size:.88rem}
+    .burger{display:none;background:0;border:0;font-size:1.5rem;color:var(--ink)}
+    /* hero */
+    .hero{padding:80px 24px 96px;overflow:hidden}
+    .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+    .hero h1{font-size:clamp(2.8rem,6.4vw,4.8rem);margin:.7rem 0 1.3rem;text-transform:uppercase}
+    .hero h1 em{font-style:normal;color:var(--accent)}
+    .hero .lead{font-size:1.14rem;margin-bottom:2rem}
+    .hero-media{position:relative}
+    .hero-media .skel{border-radius:var(--r-lg)}
+    .hero-media img{border-radius:var(--r-lg);aspect-ratio:4/5;object-fit:cover;width:100%;box-shadow:var(--shadow)}
+    .float-chip{position:absolute;left:-18px;bottom:26px;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:14px 18px;box-shadow:var(--shadow);display:flex;align-items:center;gap:12px}
+    .float-chip b{font-family:var(--display);font-size:1.25rem;color:var(--accent);display:block;line-height:1}
+    .float-chip span{font-size:.78rem;color:var(--muted)}
+    /* skeleton */
+    .skel{position:relative;overflow:hidden;background:#EFEDE6;border-radius:inherit}
+    .skel::after{content:"";position:absolute;inset:0;transform:translateX(-100%);background:linear-gradient(90deg,transparent,rgba(255,255,255,.75),transparent);animation:shimmer 1.4s infinite}
+    @keyframes shimmer{to{transform:translateX(100%)}}
+    .skel>img{opacity:0;transition:opacity .45s}
+    .skel.loaded{background:transparent}.skel.loaded::after{display:none}.skel.loaded>img{opacity:1}
+    /* marquee */
+    .marquee{padding:20px 0;background:var(--ink);overflow:hidden}
+    .marquee-track{display:flex;width:max-content;animation:marquee 24s linear infinite}
+    .marquee span{font-family:var(--display);font-weight:700;font-size:1.25rem;text-transform:uppercase;letter-spacing:.14em;white-space:nowrap;color:#fff;padding-right:16px}
+    .marquee em{font-style:normal;color:var(--accent)}
+    @keyframes marquee{to{transform:translateX(-50%)}}
+    /* classes */
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .cls{background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);padding:30px;transition:.25s}
+    .cls:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:transparent}
+    .cls .ic{width:52px;height:52px;border-radius:var(--r-sm);background:var(--peach);color:var(--accent);display:grid;place-items:center;margin-bottom:16px}
+    .cls h3{font-size:1.15rem;margin-bottom:8px}
+    .cls p{color:var(--muted);font-size:.93rem}
+    .cls .tag{display:inline-block;margin-top:14px;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+    /* schedule */
+    .sched{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden}
+    .sched table{width:100%;border-collapse:collapse;font-size:.93rem}
+    .sched th{font-family:var(--display);text-align:left;padding:16px 20px;background:var(--ink);color:#fff;font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:.78rem}
+    .sched td{padding:14px 20px;border-top:1px solid var(--line);color:var(--muted)}
+    .sched td b{color:var(--ink);font-weight:600}
+    .sched .pill{display:inline-block;background:var(--peach);color:var(--accent-dk);font-size:.74rem;font-weight:700;padding:.2rem .7rem;border-radius:var(--pill)}
+    /* pricing strip */
+    .offer{background:var(--accent);color:#fff;border-radius:var(--r-lg);padding:48px;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;box-shadow:var(--glow)}
+    .offer h2{font-size:clamp(1.7rem,3.6vw,2.6rem);text-transform:uppercase}
+    .offer p{opacity:.92}
+    .offer .btn{background:#fff;color:var(--accent-dk)}
+    /* reviews */
+    .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .rev{background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);padding:28px}
+    .rev p{margin:12px 0 18px;font-size:1rem}
+    .stars{color:var(--accent);letter-spacing:2px}
+    .who{display:flex;align-items:center;gap:12px}
+    .av{width:42px;height:42px;border-radius:var(--pill);background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:700}
+    .who b{display:block;font-size:.95rem} .who span{font-size:.82rem;color:var(--muted)}
+    /* visit */
+    .visit{background:var(--ink);color:#fff}
+    .visit .split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+    .visit .lead{color:rgba(255,255,255,.72)}
+    .info-row{display:flex;gap:14px;margin:18px 0;align-items:center;color:rgba(255,255,255,.85)}
+    .info-row svg{color:var(--accent);flex:none} .info-row a:hover{color:var(--accent)}
+    form{background:#fff;color:var(--ink);padding:32px;border-radius:var(--r-lg);box-shadow:var(--shadow)}
+    form h3{font-size:1.35rem;text-transform:uppercase}
+    form label{font-size:.8rem;font-weight:700;display:block;margin:14px 0 6px;text-transform:uppercase;letter-spacing:.05em}
+    form input,form textarea{width:100%;padding:.85rem 1rem;border:1.5px solid var(--line);border-radius:var(--r-sm);font-family:var(--body);font-size:.95rem;background:var(--bg)}
+    form input:focus,form textarea:focus{outline:0;border-color:var(--accent)}
+    form .btn-primary{width:100%;justify-content:center;margin-top:22px}
+    footer{background:#0D0D0D;color:rgba(250,250,247,.6);padding:56px 24px 32px;text-align:center}
+    footer .logo{color:#fff;margin-bottom:10px}
+    footer .fnav{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin:16px 0}
+    footer .fnav a:hover{color:#fff}
+    .credit{margin-top:22px;font-size:.8rem;opacity:.6}.credit a{color:var(--accent)}
+    .fab{position:fixed;bottom:24px;right:24px;z-index:60;width:58px;height:58px;border-radius:var(--pill);background:#25D366;display:grid;place-items:center;color:#fff;box-shadow:0 10px 28px -6px rgba(37,211,102,.6);transition:.2s}
+    .fab:hover{transform:scale(1.08)}
+    .reveal{opacity:0;transform:translateY(24px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+    .reveal.in{opacity:1;transform:none}
+    @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.skel::after{animation:none}.marquee-track{animation:none}}
+    @media(max-width:880px){
+      section{padding:64px 20px}
+      .nav-links{position:fixed;inset:62px 0 auto;flex-direction:column;background:var(--bg);padding:24px;gap:20px;transform:translateY(-170%);transition:.3s;border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
+      .nav-links.open{transform:none}.burger{display:block}
+      .hero .wrap,.visit .split{grid-template-columns:1fr;gap:36px}
+      .grid3,.rev-grid{grid-template-columns:1fr}
+      .float-chip{left:10px}
+      .sched{overflow-x:auto} .sched table{min-width:560px}
+      .offer{padding:32px}
+    }
+  </style>
+</head>
+<body>
+  <!-- ══ NAV ══ -->
+  <header><nav>
+    <a class="logo" href="#">PULSE<span>.</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#classes">Classes</a><a href="#schedule">Schedule</a><a href="#reviews">Results</a><a href="#visit">Visit</a>
+      <a class="btn btn-primary" href="https://wa.me/919876543210?text=Hi%20Pulse!%20I%20want%20my%20free%20first%20class." target="_blank" rel="noopener">First Class Free</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+  </nav></header>
+
+  <!-- ══ HERO ══ -->
+  <section class="hero"><div class="wrap">
+    <div>
+      <p class="eyebrow">Boutique Fitness · Indiranagar</p>
+      <h1>Sweat <em>smarter.</em><br />Together.</h1>
+      <p class="lead">Small-group classes capped at 12, coaches who know your name, and a space that makes you want to show up. Your first class is on us.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <a class="btn btn-primary" href="https://wa.me/919876543210?text=Hi%20Pulse!%20I%20want%20my%20free%20first%20class." target="_blank" rel="noopener">Claim Free Class</a>
+        <a class="btn btn-ghost" href="#schedule">See Schedule</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <div class="skel"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=900&q=80" alt="Group class at Pulse Studio" loading="lazy" /></div>
+      <div class="float-chip"><div><b>4.8★</b><span>192 Google reviews</span></div></div>
+    </div>
+  </div></section>
+
+  <!-- ══ MARQUEE ══ -->
+  <div class="marquee" aria-hidden="true"><div class="marquee-track">
+    <span>HIIT <em>·</em> Strength <em>·</em> Yoga <em>·</em> Spin <em>·</em> Mobility <em>·</em> Boxing <em>·</em>&nbsp;</span>
+    <span>HIIT <em>·</em> Strength <em>·</em> Yoga <em>·</em> Spin <em>·</em> Mobility <em>·</em> Boxing <em>·</em>&nbsp;</span>
+  </div></div>
+
+  <!-- ══ CLASSES ══ -->
+  <section id="classes"><div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Classes</p>
+      <h2>Pick your pulse.</h2>
+      <p class="lead">Six formats, all coached, all capped at 12 people. No lost-in-the-crowd workouts.</p>
+    </div>
+    <div class="grid3">
+      <div class="cls reveal"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h3>HIIT 45</h3><p>Intervals that torch calories and build engines. Scaled to your level, never watered down.</p><span class="tag">Mon · Wed · Fri</span></div>
+      <div class="cls reveal"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5h11v11h-11z"/><path d="M2 9.5v5M22 9.5v5M4.25 7v10M19.75 7v10"/></svg></div><h3>Strength Lab</h3><p>Barbell fundamentals with progressive programming. Learn to lift properly, get strong for life.</p><span class="tag">Tue · Thu · Sat</span></div>
+      <div class="cls reveal"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/></svg></div><h3>Flow Yoga</h3><p>Strength-meets-stretch vinyasa to balance the hard days. Morning and sunset batches.</p><span class="tag">Daily</span></div>
+      <div class="cls reveal"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg></div><h3>Spin Studio</h3><p>Rhythm rides in the dark with playlists that do half the work. Sweat guaranteed.</p><span class="tag">Mon – Sat</span></div>
+      <div class="cls reveal"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Mobility &amp; Recover</h3><p>Deep stretch, breathwork and soft-tissue care. The class your future self keeps thanking you for.</p><span class="tag">Wed · Sun</span></div>
+      <div class="cls reveal"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6M9 9l6 6"/></svg></div><h3>Box Fit</h3><p>Pads, bags and footwork. Learn to hit clean while your cardio quietly becomes elite.</p><span class="tag">Tue · Fri</span></div>
+    </div>
+  </div></section>
+
+  <!-- ══ SCHEDULE ══ -->
+  <section id="schedule" style="background:#F3F1EA"><div class="wrap">
+    <div class="section-head reveal"><p class="eyebrow">This Week</p><h2>The schedule.</h2></div>
+    <div class="sched reveal"><table>
+      <tr><th>Time</th><th>Mon</th><th>Wed</th><th>Fri</th><th>Sat</th></tr>
+      <tr><td><b>6:30 am</b></td><td>HIIT 45</td><td>HIIT 45</td><td>HIIT 45</td><td>Strength Lab</td></tr>
+      <tr><td><b>8:00 am</b></td><td>Flow Yoga</td><td>Mobility</td><td>Flow Yoga</td><td>Spin <span class="pill">full</span></td></tr>
+      <tr><td><b>6:30 pm</b></td><td>Spin</td><td>Box Fit</td><td>Spin</td><td>Flow Yoga</td></tr>
+      <tr><td><b>8:00 pm</b></td><td>Strength Lab</td><td>HIIT 45 <span class="pill">2 left</span></td><td>Box Fit</td><td>—</td></tr>
+    </table></div>
+  </div></section>
+
+  <!-- ══ OFFER ══ -->
+  <section><div class="wrap">
+    <div class="offer reveal">
+      <div><h2>First class free. Zero pressure.</h2><p>Try any format. If it's not for you, no hard feelings — and no follow-up spam.</p></div>
+      <a class="btn" href="https://wa.me/919876543210?text=Hi%20Pulse!%20Booking%20my%20free%20class." target="_blank" rel="noopener">Book on WhatsApp →</a>
+    </div>
+  </div></section>
+
+  <!-- ══ REVIEWS ══ -->
+  <section id="reviews"><div class="wrap">
+    <div class="section-head reveal"><p class="eyebrow">Results</p><h2>People keep showing up.</h2></div>
+    <div class="rev-grid">
+      <div class="rev reveal"><span class="stars">★★★★★</span><p>"Classes capped at 12 changes everything — the coach actually fixes your form. Fittest I've been since college."</p><div class="who"><div class="av">R</div><div><b>Rhea T.</b><span>Member · 10 months</span></div></div></div>
+      <div class="rev reveal"><span class="stars">★★★★★</span><p>"The 6:30am HIIT crew is a cult in the best way. You just keep coming back. Spotless studio too."</p><div class="who"><div class="av">K</div><div><b>Kabir J.</b><span>Member · 1.5 years</span></div></div></div>
+      <div class="rev reveal"><span class="stars">★★★★★</span><p>"Went for the free class, stayed for the people. Down 9kg and finally enjoy Mondays."</p><div class="who"><div class="av">S</div><div><b>Sana V.</b><span>Member · 7 months</span></div></div></div>
+    </div>
+  </div></section>
+
+  <!-- ══ VISIT ══ -->
+  <section id="visit" class="visit"><div class="wrap split">
+    <div class="reveal">
+      <p class="eyebrow">Visit Us</p>
+      <h2 style="font-size:clamp(2rem,4vw,2.8rem);margin:.6rem 0 1rem;text-transform:uppercase">Come feel it.</h2>
+      <p class="lead">Book your free class — it lands straight on our WhatsApp and we'll confirm your slot.</p>
+      <div class="info-row"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span>21, 12th Main, Indiranagar, Bengaluru 560008</span></div>
+      <div class="info-row"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Every day · 6:00 am – 10:00 pm</span></div>
+      <div class="info-row"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+919876543210">+91 98765 43210</a></div>
+    </div>
+    <form onsubmit="return sendWhatsApp(event)">
+      <h3>Free First Class</h3>
+      <label for="nm">Your name</label><input id="nm" required placeholder="e.g. Rhea" autocomplete="name" />
+      <label for="dt">Class &amp; preferred time</label><input id="dt" required placeholder="e.g. HIIT, weekday mornings" />
+      <label for="msg">Fitness goal (optional)</label><textarea id="msg" rows="2" placeholder="e.g. lose weight / get stronger"></textarea>
+      <button class="btn btn-primary" type="submit">Book on WhatsApp →</button>
+    </form>
+  </div></section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="logo">PULSE<span style="color:var(--accent)">.</span></div>
+    <p>Sweat smarter. Together.</p>
+    <div class="fnav"><a href="#classes">Classes</a><a href="#schedule">Schedule</a><a href="#visit">Visit</a></div>
+    <p style="font-size:.85rem">© <span id="yr"></span> Pulse Studio · Indiranagar, Bengaluru</p>
+    <p class="credit">Website by <a href="https://noviqostudio.github.io/" target="_blank" rel="noopener">Noviqo Studio</a> — Look bigger. Get booked.</p>
+  </footer>
+
+  <a class="fab" href="https://wa.me/919876543210?text=Hi%20Pulse!" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg width="27" height="27" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    const burger=document.getElementById('burger'),links=document.getElementById('navLinks');
+    burger.addEventListener('click',()=>links.classList.toggle('open'));
+    links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+    document.querySelectorAll('.skel').forEach(w=>{const m=w.querySelector('img');if(!m){w.classList.add('loaded');return}
+      const d=()=>w.classList.add('loaded');
+      if(m.complete&&m.naturalWidth>0)return d();
+      m.addEventListener('load',d,{once:true});m.addEventListener('error',d,{once:true});setTimeout(d,6000);});
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    document.getElementById('yr').textContent=new Date().getFullYear();
+    const PHONE='919876543210';
+    function sendWhatsApp(e){e.preventDefault();
+      const nm=document.getElementById('nm').value.trim(),dt=document.getElementById('dt').value.trim(),msg=document.getElementById('msg').value.trim();
+      const text=`Hi Pulse Studio! Free class booking:\n• Name: ${nm}\n• Class: ${dt}${msg?`\n• Goal: ${msg}`:''}`;
+      window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`,'_blank');return false;}
+  </script>
+</body>
+</html>

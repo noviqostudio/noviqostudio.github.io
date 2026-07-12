@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- NOVIQO STUDIO · Cafe Template V2 "Velvet Bean" (dark espresso variant)
+     Conventions: docs/BUILD-PLAYBOOK.md. Factory-compatible section banners.
+     Demo phone is a placeholder; Factory swaps 919876543210 per client. -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velvet Bean · Late-Night Espresso Bar in Koramangala, Bengaluru</title>
+  <meta name="description" content="Velvet Bean is a late-night espresso bar in Koramangala, Bengaluru. Small-batch roasts, desserts, and slow conversations — open till 1am." />
+  <meta name="theme-color" content="#14100E" />
+  <meta property="og:title" content="Velvet Bean · Late-Night Espresso Bar" />
+  <meta property="og:description" content="Small-batch roasts, desserts, open till 1am." />
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Velvet Bean",
+   "address":{"@type":"PostalAddress","streetAddress":"8, 80 Ft Road, Koramangala","addressLocality":"Bengaluru","postalCode":"560095","addressCountry":"IN"},
+   "telephone":"+919876543210","openingHours":"Mo-Su 11:00-01:00","priceRange":"₹₹",
+   "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"264"}}
+  </script>
+  <style>
+    :root{
+      --bg:#14100E; --bg-2:#1C1613; --ink:#F3EBDD; --muted:#B8A995;
+      --accent:#C98A4B; --accent-2:#E8B87E; --line:rgba(201,138,75,.22);
+      --grad:linear-gradient(100deg,#E8B87E,#C98A4B 55%,#9C6430);
+      --display:'Fraunces',Georgia,serif; --body:'Inter',system-ui,sans-serif;
+      --r-sm:10px; --r-md:16px; --r-lg:26px; --pill:999px;
+      --shadow:0 20px 60px -20px rgba(0,0,0,.6); --maxw:1140px;
+    }
+    *{margin:0;padding:0;box-sizing:border-box} html{scroll-behavior:smooth}
+    body{overflow-x:hidden;font-family:var(--body);color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+    h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spacing:-.01em}
+    a{color:inherit;text-decoration:none} a,button{cursor:pointer} img{display:block;max-width:100%}
+    :focus-visible{outline:2px solid var(--accent-2);outline-offset:3px}
+    section{padding:96px 24px;position:relative} .wrap{max-width:var(--maxw);margin:0 auto}
+    .eyebrow{font-weight:600;font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;color:var(--accent-2)}
+    .gold{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{color:var(--muted);font-size:1.06rem;max-width:60ch}
+    .section-head{max-width:58ch;margin-bottom:56px}
+    .section-head h2{font-size:clamp(2rem,4.4vw,3rem);margin:.6rem 0 1rem}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:.95rem;padding:.9rem 1.6rem;border-radius:var(--pill);border:0;transition:transform .2s,box-shadow .2s}
+    .btn:hover{transform:translateY(-2px)} .btn:active{transform:scale(.98)}
+    .btn-primary{background:var(--grad);color:#20150B;box-shadow:0 10px 30px -8px rgba(201,138,75,.5)}
+    .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+    .btn-ghost:hover{border-color:var(--accent)}
+    header{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(20,16,14,.82);border-bottom:1px solid var(--line)}
+    nav{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:15px 24px}
+    .logo{font-family:var(--display);font-weight:700;font-size:1.35rem}
+    .logo span{color:var(--accent-2)}
+    .nav-links{display:flex;gap:30px;align-items:center}
+    .nav-links a{font-size:.92rem;color:var(--muted);font-weight:500;transition:.2s}
+    .nav-links a:hover{color:var(--ink)} .nav-links a.btn-primary{color:#20150B;padding:.6rem 1.2rem;font-size:.88rem}
+    .burger{display:none;background:0;border:0;font-size:1.5rem;color:var(--ink)}
+    /* hero */
+    .hero{min-height:90vh;display:flex;align-items:center;overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 500px at 80% 0%,rgba(201,138,75,.14),transparent 65%)}
+    .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+    .hero h1{font-size:clamp(2.7rem,6vw,4.6rem);margin:.8rem 0 1.3rem}
+    .hero .lead{font-size:1.14rem;margin-bottom:2rem}
+    .hero-img{border-radius:var(--r-lg);box-shadow:var(--shadow);aspect-ratio:4/5;object-fit:cover;width:100%}
+    .badge{display:inline-flex;align-items:center;gap:10px;margin-top:2rem;border:1px solid var(--line);padding:.55rem 1rem;border-radius:var(--pill);font-size:.88rem;color:var(--muted)}
+    .badge b{color:var(--accent-2)}
+    /* skeleton */
+    .skel{position:relative;overflow:hidden;background:var(--bg-2);border-radius:inherit}
+    .skel::after{content:"";position:absolute;inset:0;transform:translateX(-100%);background:linear-gradient(90deg,transparent,rgba(232,184,126,.12),transparent);animation:shimmer 1.4s infinite}
+    @keyframes shimmer{to{transform:translateX(100%)}}
+    .skel>img{opacity:0;transition:opacity .45s}
+    .skel.loaded{background:transparent}.skel.loaded::after{display:none}.skel.loaded>img{opacity:1}
+    /* menu */
+    .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .menu-cat{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r-md);padding:30px;transition:.25s}
+    .menu-cat:hover{transform:translateY(-4px);border-color:rgba(232,184,126,.45)}
+    .menu-cat h3{font-size:1.3rem;margin-bottom:18px;color:var(--accent-2)}
+    .menu-item{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line)}
+    .menu-item:last-child{border:0}
+    .menu-item .nm{font-weight:500} .menu-item small{display:block;color:var(--muted);font-weight:400;font-size:.82rem}
+    .menu-item .pr{font-family:var(--display);font-weight:600;color:var(--accent-2);white-space:nowrap}
+    /* gallery */
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .gallery .skel{border-radius:var(--r-sm)}
+    .gallery img{height:230px;width:100%;object-fit:cover;border-radius:var(--r-sm);transition:.3s}
+    .gallery .skel:first-child{grid-column:span 2;grid-row:span 2}
+    .gallery .skel:first-child img{height:100%}
+    .gallery img:hover{transform:scale(1.03)}
+    /* reviews */
+    .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .rev{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r-md);padding:28px}
+    .rev p{margin:12px 0 18px;font-size:1rem}
+    .stars{color:var(--accent-2);letter-spacing:2px}
+    .who{display:flex;align-items:center;gap:12px}
+    .av{width:42px;height:42px;border-radius:var(--pill);background:var(--grad);color:#20150B;display:grid;place-items:center;font-weight:700}
+    .who b{display:block;font-size:.95rem} .who span{font-size:.82rem;color:var(--muted)}
+    /* visit */
+    .visit{background:var(--bg-2);border-top:1px solid var(--line)}
+    .visit .split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+    .info-row{display:flex;gap:14px;margin:18px 0;align-items:center;color:var(--muted)}
+    .info-row svg{color:var(--accent-2);flex:none}
+    form{background:var(--ink);color:#241B12;padding:32px;border-radius:var(--r-lg);box-shadow:var(--shadow)}
+    form h3{color:#8A5A28;font-size:1.35rem}
+    form label{font-size:.82rem;font-weight:600;display:block;margin:14px 0 6px}
+    form input,form textarea{width:100%;padding:.85rem 1rem;border:1.5px solid #D9CBB4;border-radius:var(--r-sm);font-family:var(--body);font-size:.95rem;background:#FCF8F1}
+    form input:focus,form textarea:focus{outline:0;border-color:var(--accent)}
+    form .btn-primary{width:100%;justify-content:center;margin-top:22px}
+    footer{background:#0E0B09;color:var(--muted);padding:56px 24px 32px;text-align:center;border-top:1px solid var(--line)}
+    footer .logo{color:var(--ink);margin-bottom:10px}
+    footer .fnav{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin:16px 0}
+    .credit{margin-top:22px;font-size:.8rem;opacity:.6}.credit a{color:var(--accent-2)}
+    .fab{position:fixed;bottom:24px;right:24px;z-index:60;width:58px;height:58px;border-radius:var(--pill);background:#25D366;display:grid;place-items:center;color:#fff;box-shadow:0 10px 28px -6px rgba(37,211,102,.6);transition:.2s}
+    .fab:hover{transform:scale(1.08)}
+    .reveal{opacity:0;transform:translateY(24px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+    .reveal.in{opacity:1;transform:none}
+    @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.skel::after{animation:none}}
+    @media(max-width:880px){
+      section{padding:64px 20px}
+      .nav-links{position:fixed;inset:62px 0 auto;flex-direction:column;background:var(--bg);padding:24px;gap:20px;transform:translateY(-170%);transition:.3s;border-bottom:1px solid var(--line)}
+      .nav-links.open{transform:none}.burger{display:block}
+      .hero .wrap,.visit .split{grid-template-columns:1fr;gap:36px}
+      .menu-grid,.rev-grid{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr 1fr}.gallery .skel:first-child{grid-column:span 2}
+    }
+  </style>
+</head>
+<body>
+  <!-- ══ NAV ══ -->
+  <header><nav>
+    <a class="logo" href="#">Velvet<span>Bean</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#menu">Menu</a><a href="#gallery">Space</a><a href="#reviews">Love</a><a href="#visit">Visit</a>
+      <a class="btn btn-primary" href="https://wa.me/919876543210?text=Hi%20Velvet%20Bean!%20Table%20for%20tonight%3F" target="_blank" rel="noopener">Reserve</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+  </nav></header>
+
+  <!-- ══ HERO ══ -->
+  <section class="hero"><div class="wrap">
+    <div>
+      <p class="eyebrow">Espresso Bar · Open till 1am</p>
+      <h1>Where Bengaluru <span class="gold">slows down</span> after dark.</h1>
+      <p class="lead">Small-batch espresso, slow desserts, low light and lower volume. The late-night third place Koramangala was missing.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <a class="btn btn-primary" href="#menu">Tonight's Menu</a>
+        <a class="btn btn-ghost" href="https://wa.me/919876543210?text=Hi%20Velvet%20Bean!%20Table%20for%20tonight%3F" target="_blank" rel="noopener">Reserve on WhatsApp</a>
+      </div>
+      <p class="badge"><b>★ 4.9</b> · 264 reviews · open every night 11am – 1am</p>
+    </div>
+    <div class="skel" style="border-radius:var(--r-lg)">
+      <img class="hero-img" src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=900&q=80" alt="Espresso being pulled at Velvet Bean" loading="lazy" />
+    </div>
+  </div></section>
+
+  <!-- ══ MENU ══ -->
+  <section id="menu"><div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">The Menu</p>
+      <h2>Small hours. <span class="gold">Big flavours.</span></h2>
+      <p class="lead">Espresso after espresso, and desserts worth staying up for.</p>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-cat reveal"><h3>Espresso</h3>
+        <div class="menu-item"><span class="nm">Midnight Doppio<small>Dark roast, syrupy</small></span><span class="pr">₹160</span></div>
+        <div class="menu-item"><span class="nm">Velvet Flat White<small>House blend</small></span><span class="pr">₹190</span></div>
+        <div class="menu-item"><span class="nm">Affogato<small>Vanilla gelato, double shot</small></span><span class="pr">₹240</span></div>
+        <div class="menu-item"><span class="nm">Cold Brew Negroni-style<small>Zero-proof, bitters</small></span><span class="pr">₹260</span></div>
+      </div>
+      <div class="menu-cat reveal"><h3>Desserts</h3>
+        <div class="menu-item"><span class="nm">Basque Cheesecake<small>Burnt, creamy</small></span><span class="pr">₹280</span></div>
+        <div class="menu-item"><span class="nm">Dark Chocolate Tart<small>70% single origin</small></span><span class="pr">₹260</span></div>
+        <div class="menu-item"><span class="nm">Tiramisu Jar<small>Espresso-soaked</small></span><span class="pr">₹290</span></div>
+        <div class="menu-item"><span class="nm">Sea-Salt Cookie<small>Warm, gooey</small></span><span class="pr">₹120</span></div>
+      </div>
+      <div class="menu-cat reveal"><h3>Late Plates</h3>
+        <div class="menu-item"><span class="nm">Truffle Grilled Cheese<small>Sourdough</small></span><span class="pr">₹320</span></div>
+        <div class="menu-item"><span class="nm">Midnight Maggi<small>House masala</small></span><span class="pr">₹180</span></div>
+        <div class="menu-item"><span class="nm">Hummus &amp; Lavash<small>Beetroot / classic</small></span><span class="pr">₹260</span></div>
+        <div class="menu-item"><span class="nm">Bun Maska &amp; Kaapi<small>The classic</small></span><span class="pr">₹150</span></div>
+      </div>
+    </div>
+  </div></section>
+
+  <!-- ══ GALLERY ══ -->
+  <section id="gallery" style="background:var(--bg-2)"><div class="wrap">
+    <div class="section-head reveal"><p class="eyebrow">The Space</p><h2>Low light, <span class="gold">warm corners.</span></h2></div>
+    <div class="gallery reveal">
+      <div class="skel"><img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=900&q=80" alt="Velvet Bean interior" loading="lazy" /></div>
+      <div class="skel"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=500&q=80" alt="Espresso close-up" loading="lazy" /></div>
+      <div class="skel"><img src="https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&w=500&q=80" alt="Dessert plate" loading="lazy" /></div>
+      <div class="skel"><img src="https://images.unsplash.com/photo-1524350876685-274059332603?auto=format&fit=crop&w=500&q=80" alt="Cafe corner at night" loading="lazy" /></div>
+      <div class="skel"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=500&q=80" alt="Coffee ritual" loading="lazy" /></div>
+    </div>
+  </div></section>
+
+  <!-- ══ REVIEWS ══ -->
+  <section id="reviews"><div class="wrap">
+    <div class="section-head reveal"><p class="eyebrow">Loved Late</p><h2>What the night owls say.</h2></div>
+    <div class="rev-grid">
+      <div class="rev reveal"><span class="stars">★★★★★</span><p>"Finally a place that takes coffee seriously after 11pm. The affogato ended a rough week perfectly."</p><div class="who"><div class="av">T</div><div><b>Tanvi S.</b><span>Local Guide · 58 reviews</span></div></div></div>
+      <div class="rev reveal"><span class="stars">★★★★★</span><p>"Quiet, dim, unhurried. Brought a book, stayed three hours, nobody rushed me. Basque cheesecake is criminal."</p><div class="who"><div class="av">D</div><div><b>Dev P.</b><span>31 reviews</span></div></div></div>
+      <div class="rev reveal"><span class="stars">★★★★★</span><p>"Our default post-shift spot. Midnight Maggi + doppio is the correct order. Staff remember your name."</p><div class="who"><div class="av">I</div><div><b>Ira M.</b><span>Local Guide · 44 reviews</span></div></div></div>
+    </div>
+  </div></section>
+
+  <!-- ══ VISIT ══ -->
+  <section id="visit" class="visit"><div class="wrap split">
+    <div class="reveal">
+      <p class="eyebrow">Visit Us</p>
+      <h2 style="font-size:clamp(2rem,4vw,2.8rem);margin:.6rem 0 1rem">Come after dark.</h2>
+      <p class="lead">Walk-ins welcome; reservations get the window seats. Message us — it lands straight on our WhatsApp.</p>
+      <div class="info-row"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span>8, 80 Ft Road, Koramangala, Bengaluru 560095</span></div>
+      <div class="info-row"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Every night · 11:00 am – 1:00 am</span></div>
+      <div class="info-row"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+919876543210">+91 98765 43210</a></div>
+    </div>
+    <form onsubmit="return sendWhatsApp(event)">
+      <h3>Reserve a Table</h3>
+      <label for="nm">Your name</label><input id="nm" required placeholder="e.g. Tanvi" autocomplete="name" />
+      <label for="dt">When &amp; how many</label><input id="dt" required placeholder="e.g. Tonight 10pm, 2 people" />
+      <label for="msg">Note (optional)</label><textarea id="msg" rows="2" placeholder="Window seat?"></textarea>
+      <button class="btn btn-primary" type="submit">Reserve on WhatsApp →</button>
+    </form>
+  </div></section>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+    <div class="logo">Velvet<span style="color:var(--accent-2)">Bean</span></div>
+    <p>Where Bengaluru slows down after dark.</p>
+    <div class="fnav"><a href="#menu">Menu</a><a href="#gallery">Space</a><a href="#visit">Visit</a></div>
+    <p style="font-size:.85rem">© <span id="yr"></span> Velvet Bean · Koramangala, Bengaluru</p>
+    <p class="credit">Website by <a href="https://noviqostudio.github.io/" target="_blank" rel="noopener">Noviqo Studio</a> — Look bigger. Get booked.</p>
+  </footer>
+
+  <a class="fab" href="https://wa.me/919876543210?text=Hi%20Velvet%20Bean!" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg width="27" height="27" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    const burger=document.getElementById('burger'),links=document.getElementById('navLinks');
+    burger.addEventListener('click',()=>links.classList.toggle('open'));
+    links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+    document.querySelectorAll('.skel').forEach(w=>{const m=w.querySelector('img');if(!m){w.classList.add('loaded');return}
+      const d=()=>w.classList.add('loaded');
+      if(m.complete&&m.naturalWidth>0)return d();
+      m.addEventListener('load',d,{once:true});m.addEventListener('error',d,{once:true});setTimeout(d,6000);});
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    document.getElementById('yr').textContent=new Date().getFullYear();
+    const PHONE='919876543210';
+    function sendWhatsApp(e){e.preventDefault();
+      const nm=document.getElementById('nm').value.trim(),dt=document.getElementById('dt').value.trim(),msg=document.getElementById('msg').value.trim();
+      const text=`Hi Velvet Bean! Reservation:\n• Name: ${nm}\n• When: ${dt}${msg?`\n• Note: ${msg}`:''}`;
+      window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`,'_blank');return false;}
+  </script>
+</body>
+</html>
