@@ -1,0 +1,23 @@
+# Noviqo Studio
+> Premium website design & development studio for local businesses across India — cafes, restaurants, gyms, dental clinics, salons, and schools. Live in 7 days, from Rs 9,999.
+
+## About
+Noviqo Studio builds fast, mobile-first, WhatsApp-integrated websites with local SEO built in. Tagline: Design. Develop. Grow. / Look bigger. Get booked.
+
+## Services
+- Premium website design & development (1-page to 10+ page custom sites)
+- Local SEO & Google Business setup
+- WhatsApp enquiry/booking integration
+- Website care plans (hosting, security, edits, SEO) from Rs 999/month
+- Branding & business automation
+
+## Pricing
+- Launch: Rs 9,999 (1-page premium site)
+- Business: Rs 24,999 (5-6 page custom site) — most popular
+- Premium: Rs 49,999 (10+ pages, automation)
+
+## Contact
+- Website: https://noviqo.co.in
+- Email: support.noviqostudio@gmail.com
+- WhatsApp: +91 95352 78181
+- Based in Bengaluru, serving all of India
