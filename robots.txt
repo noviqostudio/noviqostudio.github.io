@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /demos/
 
-Sitemap: https://noviqostudio.github.io/sitemap.xml
+Sitemap: https://noviqo.co.in/sitemap.xml
