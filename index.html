@@ -10,7 +10,10 @@
   <link rel="canonical" href="https://noviqo.co.in/" />
   <meta name="theme-color" content="#0C1424" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
-  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon-96x96.png" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
   <!-- Open Graph + Twitter -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Noviqo Studio" />
@@ -34,28 +37,56 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "@id": "https://noviqo.co.in/#studio",
-    "name": "Noviqo Studio",
-    "url": "https://noviqo.co.in/",
-    "image": "https://noviqo.co.in/assets/logo.webp",
-    "logo": "https://noviqo.co.in/assets/logo.webp",
-    "description": "Premium website design and development studio for local businesses across India — cafes, gyms, clinics, salons and schools.",
-    "slogan": "Design. Develop. Grow.",
-    "email": "support.noviqostudio@gmail.com",
-    "telephone": "+91-95352-78181",
-    "priceRange": "₹₹",
-    "areaServed": [
-      { "@type": "Country", "name": "India" },
-      "Jaipur", "Lucknow", "Indore", "Ahmedabad", "Pune", "Delhi NCR", "Chandigarh"
-    ],
-    "address": { "@type": "PostalAddress", "addressLocality": "Bengaluru", "addressRegion": "Karnataka", "addressCountry": "IN" },
-    "knowsAbout": ["Website design", "Web development", "Local SEO", "Business automation", "Branding"],
-    "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "telephone": "+91-95352-78181", "email": "support.noviqostudio@gmail.com", "availableLanguage": ["en", "hi"] },
-    "makesOffer": [
-      { "@type": "Offer", "name": "Launch — 1-page premium website", "price": "9999", "priceCurrency": "INR" },
-      { "@type": "Offer", "name": "Business — 5-6 page custom website", "price": "24999", "priceCurrency": "INR" },
-      { "@type": "Offer", "name": "Premium — 10+ page website", "price": "49999", "priceCurrency": "INR" }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://noviqo.co.in/#organization",
+        "name": "Noviqo Studio",
+        "url": "https://noviqo.co.in/",
+        "logo": { "@type": "ImageObject", "url": "https://noviqo.co.in/assets/icon-512.png", "width": 512, "height": 512 },
+        "image": "https://noviqo.co.in/assets/logo.webp",
+        "email": "support@noviqo.co.in",
+        "slogan": "Design. Develop. Grow.",
+        "sameAs": [
+          "https://www.linkedin.com/company/noviqo-studio/",
+          "https://www.facebook.com/profile.php?id=61591762566777"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://noviqo.co.in/#website",
+        "url": "https://noviqo.co.in/",
+        "name": "Noviqo Studio",
+        "description": "Premium website design & development for local businesses across India.",
+        "publisher": { "@id": "https://noviqo.co.in/#organization" },
+        "inLanguage": "en-IN"
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://noviqo.co.in/#studio",
+        "name": "Noviqo Studio",
+        "url": "https://noviqo.co.in/",
+        "image": "https://noviqo.co.in/assets/logo.webp",
+        "logo": "https://noviqo.co.in/assets/icon-512.png",
+        "description": "Premium website design and development studio for local businesses across India — cafes, gyms, clinics, salons and schools.",
+        "slogan": "Design. Develop. Grow.",
+        "email": "support@noviqo.co.in",
+        "telephone": "+91-95352-78181",
+        "priceRange": "₹₹",
+        "parentOrganization": { "@id": "https://noviqo.co.in/#organization" },
+        "areaServed": [
+          { "@type": "Country", "name": "India" },
+          "Jaipur", "Lucknow", "Indore", "Ahmedabad", "Pune", "Delhi NCR", "Chandigarh"
+        ],
+        "address": { "@type": "PostalAddress", "addressLocality": "Bengaluru", "addressRegion": "Karnataka", "addressCountry": "IN" },
+        "knowsAbout": ["Website design", "Web development", "Local SEO", "Business automation", "Branding"],
+        "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "telephone": "+91-95352-78181", "email": "support@noviqo.co.in", "availableLanguage": ["en", "hi"] },
+        "makesOffer": [
+          { "@type": "Offer", "name": "Launch — 1-page premium website", "price": "9999", "priceCurrency": "INR" },
+          { "@type": "Offer", "name": "Business — 5-6 page custom website", "price": "24999", "priceCurrency": "INR" },
+          { "@type": "Offer", "name": "Premium — 10+ page website", "price": "49999", "priceCurrency": "INR" }
+        ]
+      }
     ]
   }
   </script>
