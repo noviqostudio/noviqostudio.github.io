@@ -14,14 +14,29 @@ function initSkeletons() {
   });
 }
 
-// ── reveal on scroll ──
+// ── reveal on scroll (with per-group stagger via --i) ──
 function initReveal() {
+  // stagger siblings inside each grid/steps container so they cascade, not pop together
+  document.querySelectorAll('.portfolio-grid, .grid3, .steps, .price-grid, .hero-actions').forEach((group) => {
+    [...group.children].forEach((child, i) => {
+      if (child.classList.contains('reveal')) child.style.setProperty('--i', i % 6);
+    });
+  });
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
       if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
   document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+}
+
+// ── nav: frost only after scrolling past the hero top ──
+function initNavScroll() {
+  const header = document.querySelector('header');
+  if (!header) return;
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 24);
+  onScroll();
+  addEventListener('scroll', onScroll, { passive: true });
 }
 
 // ── mobile nav ──
@@ -57,5 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initSkeletons();
   initReveal();
   initNav();
+  initNavScroll();
   initYear();
 });

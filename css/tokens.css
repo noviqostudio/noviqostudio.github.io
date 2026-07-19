@@ -40,10 +40,19 @@
   --r-lg: 22px;
   --pill: 999px;
 
-  /* elevation & glow */
-  --shadow: 0 20px 60px -20px rgba(0, 0, 0, .55);
-  --glow-gold: 0 10px 40px -10px rgba(212, 169, 60, .45);
-  --glow-gold-soft: 0 0 80px -20px rgba(212, 169, 60, .25);
+  /* elevation — restrained, neutral (premium tools glow with light, not colour) */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .3), 0 4px 12px -6px rgba(0, 0, 0, .4);
+  --shadow: 0 12px 32px -12px rgba(0, 0, 0, .5);
+  --shadow-lg: 0 24px 64px -24px rgba(0, 0, 0, .6);
+  --ring-gold: 0 0 0 1px rgba(240, 206, 110, .35);       /* hairline accent, not a glow */
+  --glow-gold-soft: 0 8px 30px -18px rgba(212, 169, 60, .3);  /* whisper, feature elements only */
+
+  /* motion — one language, all within the 180–400ms budget */
+  --ease: cubic-bezier(.22, .61, .36, 1);      /* gentle, decelerating */
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --dur-fast: 160ms;
+  --dur: 240ms;
+  --dur-slow: 360ms;
 
   /* layout */
   --maxw: 1180px;
